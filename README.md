@@ -35,7 +35,7 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
   - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
   - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 certified wardens based on placement in this audit.*)
 - Join [C4 Discord](https://discord.gg/code4rena) to register
-- Submit findings [using the C4 form](https://code4rena.com/contests/YYYY-MM-sponsorName-contest/submit)
+- Submit findings [using the C4 form](https://code4rena.com/contests/2023-05-reserve-protocol-invitational/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts May 26, 2023 20:00 UTC 
 - Ends May 29, 2023 20:00 UTC 
