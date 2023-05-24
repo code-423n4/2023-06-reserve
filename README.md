@@ -1,15 +1,3 @@
-# Repo setup
-
-## ⭐️ Sponsor: Add code to this repo
-
-- [ ] Create a PR to this repo with the below changes:
-- [x] Provide a self-contained repository with working commands that will build (at least) all in-scope contracts, and commands that will run tests producing gas reports for the relevant contracts.
-- [x] Make sure your code is thoroughly commented using the [NatSpec format](https://docs.soliditylang.org/en/v0.5.10/natspec-format.html#natspec-format).
-- [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to audit start time.**
-- [x] Be prepared for a 🚨code freeze🚨 for the duration of the audit — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the audit. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
-
----
-
 # Reserve Protocol - Invitational audit details
 - Total Prize Pool: $79,800 USDC 
   - HM awards: $37,995 USDC
@@ -122,30 +110,6 @@ Some areas of focus for this competition (based on deltas from the previous audi
   2) Historical basket nonce redemptions (can users retrieve more value than they should be able to?)
   3) Dutch Auctions (can these be manipulated in any way?)
 
-## Scoping Details
-
-
-- If you have a public code repo, please share it here:  https://github.com/reserve-protocol/protocol (branch `3.0.0`)
-- How many contracts are in scope?:   70
-- Total SLoC for these contracts?:  4529
-- How many external imports are there?: 20
-- How many separate interfaces and struct definitions are there for the contracts within scope?:  31 structs, 35 interfaces
-- Does most of your code generally use composition or inheritance?: The main structure of the protocol is divided up with contract composition, though inheritance is used basically everywhere, in moderation.
-- How many external calls?:  5
-- What is the overall line coverage percentage provided by your tests?:  99
-- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  while the asset plugins are not in scope for this audit, it is worth understanding the basics of how they function, especially how they consider asset units, [described here](https://github.com/reserve-protocol/protocol/blob/master/docs/collateral.md#accounting-units-and-exchange-rates).
-- Please describe required context:
-- Does it use an oracle?:  true; Specific Asset and Collateral plugins use oracles heavily; the main body of the protocol treats that as an implementation detail. Built-in assets use Chainlink oracles; other assets (if they’re canonical by the time this review is happening) are likely to use other oracles.
-- Does the token conform to the ERC20 standard?:  The present tokens are ERC20s, yes.
-- Are there any novel or unique curve logic or mathematical models?: It is important to understand: 1) Basically everything in https://github.com/reserve-protocol/protocol/blob/master/docs/solidity-style.md, some of which is unique to us 2) Our system of Collateral units, described here: https://github.com/reserve-protocol/protocol/blob/master/docs/collateral.md#accounting-units-and-exchange-rates
-- Does it use a timelock function?:  Governance uses the OZ TimelockController
-- Is it an NFT?: No
-- Does it have an AMM?:   No, though it does allow the permissionless launching of Gnosis EasyAuctions
-- Is it a fork of a popular project?:   false
-- Does it use rollups?:   false
-- Is it multi-chain?:  false
-- Does it use a side-chain?: false
-
 
 # Initializing the repo
 
@@ -198,3 +162,29 @@ NOTES:
 ## Slither
 
 `slither .` won't work, you need to run `yarn slither` 
+
+
+## Scoping Details
+
+```
+- If you have a public code repo, please share it here:  https://github.com/reserve-protocol/protocol (branch `3.0.0`)
+- How many contracts are in scope?:   70
+- Total SLoC for these contracts?:  4529
+- How many external imports are there?: 20
+- How many separate interfaces and struct definitions are there for the contracts within scope?:  31 structs, 35 interfaces
+- Does most of your code generally use composition or inheritance?: The main structure of the protocol is divided up with contract composition, though inheritance is used basically everywhere, in moderation.
+- How many external calls?:  5
+- What is the overall line coverage percentage provided by your tests?:  99
+- Is there a need to understand a separate part of the codebase / get context in order to audit this part of the protocol?:  while the asset plugins are not in scope for this audit, it is worth understanding the basics of how they function, especially how they consider asset units, [described here](https://github.com/reserve-protocol/protocol/blob/master/docs/collateral.md#accounting-units-and-exchange-rates).
+- Please describe required context:
+- Does it use an oracle?:  true; Specific Asset and Collateral plugins use oracles heavily; the main body of the protocol treats that as an implementation detail. Built-in assets use Chainlink oracles; other assets (if they’re canonical by the time this review is happening) are likely to use other oracles.
+- Does the token conform to the ERC20 standard?:  The present tokens are ERC20s, yes.
+- Are there any novel or unique curve logic or mathematical models?: It is important to understand: 1) Basically everything in https://github.com/reserve-protocol/protocol/blob/master/docs/solidity-style.md, some of which is unique to us 2) Our system of Collateral units, described here: https://github.com/reserve-protocol/protocol/blob/master/docs/collateral.md#accounting-units-and-exchange-rates
+- Does it use a timelock function?:  Governance uses the OZ TimelockController
+- Is it an NFT?: No
+- Does it have an AMM?:   No, though it does allow the permissionless launching of Gnosis EasyAuctions
+- Is it a fork of a popular project?:   false
+- Does it use rollups?:   false
+- Is it multi-chain?:  false
+- Does it use a side-chain?: false
+```
