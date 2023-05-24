@@ -22,28 +22,6 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 - [x] Please have final versions of contracts and documentation added/updated in this repo **no less than 24 hours prior to audit start time.**
 - [x] Be prepared for a 🚨code freeze🚨 for the duration of the audit — important because it establishes a level playing field. We want to ensure everyone's looking at the same code, no matter when they look during the audit. (Note: this includes your own repo, since a PR can leak alpha to our wardens!)
 
-
----
-
-## ⭐️ Sponsor: Edit this README
-
-Under "SPONSORS ADD INFO HERE" heading below, include the following:
-
-- [ ] Modify the bottom of this `README.md` file to describe how your code is supposed to work with links to any relevent documentation and any other criteria/details that the C4 Wardens should keep in mind when reviewing. ([Here's a well-constructed example.](https://github.com/code-423n4/2022-08-foundation#readme))
-  - [ ] When linking, please provide all links as full absolute links versus relative links
-  - [ ] All information should be provided in markdown format (HTML does not render on Code4rena.com)
-- [ ] Under the "Scope" heading, provide the name of each contract and:
-  - [ ] source lines of code (excluding blank lines and comments) in each
-  - [ ] external contracts called in each
-  - [ ] libraries used in each
-- [ ] Describe any novel or unique curve logic or mathematical models implemented in the contracts
-- [ ] Does the token conform to the ERC-20 standard? In what specific ways does it differ?
-- [ ] Describe anything else that adds any special logic that makes your approach unique
-- [ ] Identify any areas of specific concern in reviewing the code
-- [ ] Optional / nice to have: pre-record a high-level overview of your protocol (not just specific smart contract functions). This saves wardens a lot of time wading through documentation.
-- [ ] See also: [this checklist in Notion](https://code4rena.notion.site/Key-info-for-Code4rena-sponsors-f60764c4c4574bbf8e7a6dbd72cc49b4#0cafa01e6201462e9f78677a39e09746)
-- [ ] Delete this checklist and all text above the line below when you're ready.
-
 ---
 
 # Reserve Protocol - Invitational audit details
@@ -154,6 +132,11 @@ Additionally, we also recommend going through the following documents in order t
 - `docs/Token Flow.png`
 - `docs/solidity-style.md`
   - Especially the section on `Fixed.sol` which describes our `uint192` based fixed-point decimal value.
+
+Some areas of focus for this competition (based on deltas from the previous audit):
+  1) Recollateralization flow (can this be manipulated for profit outside of normal market mechanics? can we be sure that the token will recollateralize itself in a discrete number of steps and enough underlying + overcollaterallized value?)
+  2) Historical basket nonce redemptions (can users retrieve more value than they should be able to?)
+  3) Dutch Auctions (can these be manipulated in any way?)
 
 ## Scoping Details
 
