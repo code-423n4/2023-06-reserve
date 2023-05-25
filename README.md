@@ -10,7 +10,7 @@
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-05-reserve-protocol-invitational/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts May 26, 2023 20:00 UTC 
-- Ends May 29, 2023 20:00 UTC 
+- Ends June 09, 2023 20:00 UTC 
 
 ## Automated Findings / Publicly Known Issues
 
