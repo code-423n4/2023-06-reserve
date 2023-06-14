@@ -1,7 +1,11 @@
 # Reserve Protocol - Invitational audit details
 
-❗️ Note: This audit was originally held last month but due to insufficient participation, we are re-running it. Dates and details below:
+❗️ Special Notes: 
 
+- This audit was originally run as a 5-warden invitational; however, only 3 wardens participated and as such, we are re-running it to ensure sufficient coverage.
+- All valid findings from the first audit will be carried forward to this one, and judged/awarded alongside new submissions.
+
+#
 - Total Prize Pool: $79,800 USDC 
   - HM awards: $37,995 USDC
   - QA awards: $4,470 USDC 
