@@ -1,6 +1,6 @@
 # Reserve Protocol - Invitational audit details
 
-❗️ Note: This audit was originally held last month but due to insufficient participation, we are re-running it. Dates and details below.
+❗️ Note: This audit was originally held last month but due to insufficient participation, we are re-running it. Dates and details below:
 
 - Total Prize Pool: $79,800 USDC 
   - HM awards: $37,995 USDC
